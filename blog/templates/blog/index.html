@@ -5,8 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-{% for item in post_list %}
-    <p>{{ item.body }}</p>
-{% endfor %}
+{% if post_list %}
+    <ul>
+        {% for post in post_list %}
+            <li><a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>暂时还没有内容</p>
+{% endif %}
 </body>
 </html>

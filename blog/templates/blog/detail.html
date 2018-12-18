@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博文详情</title>
+</head>
+<body>
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% else %}
+    <p>{{ post.body }}</p>
+{% endif %}
+</body>
+</html>
